@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>热点指数 · 全市场</title>
+  <meta name="description" content="全市场与二级行业热点指数，每日更新，仅供参考。" />
+  <link rel="stylesheet" href="./assets/style.css" />
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+  <main class="wrap">
+    <header class="head">
+      <div class="title">热点指数（全市场）</div>
+      <div class="upd">每日 15:40 更新</div>
+      <div class="disc">不构成任何投资建议，指标仅供参考，请自行判断。</div>
+    </header>
+
+    <section>
+      <h2>① 全市场热点指数</h2>
+      <div class="metrics two" id="mktMetrics"></div>
+      <div class="hint">Ctrl + 滚轮：缩放　｜　Shift + 滚轮：平移　｜　拖拽也可平移　｜　纵轴随当前窗口自动伸缩</div>
+      <div id="mktChart" class="chart mkt"></div>
+    </section>
+
+    <section>
+      <h2 id="topTitle">② 当日最强热点前三名</h2>
+      <div class="top3" id="top3"></div>
+    </section>
+
+    <hr />
+
+    <section id="industry">
+      <h2>③ 选择行业</h2>
+      <div class="layout">
+        <aside class="side">
+          <input class="search" id="q" type="search" placeholder="输入代码或名称" />
+          <div id="lists"></div>
+        </aside>
+        <div class="main-pane">
+          <div class="metrics three" id="indMetrics"></div>
+          <div class="ind-name" id="indName"></div>
+          <div class="hint">Ctrl + 滚轮：缩放　｜　Shift + 滚轮：平移　｜　纯滚轮：切换行业</div>
+          <div id="indChart" class="chart ind"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./assets/app.js"></script>
+</body>
+</html>
